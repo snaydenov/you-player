@@ -25,6 +25,13 @@ module YouPlayer
         @user_id = user_id
         @playlist_name = playlist_name
       end
+	  end
+    class PlaylistRecord
+      attr_accessor : playlist_id, song_id
+
+      def initialize(playlist_id, song_id)
+        @playlist_id = playlist_id
+        @song_id = song_id
       end
 	  end
   end
