@@ -38,24 +38,12 @@ module YouTube
         return matrix.last.last
       end
       def letters_match(first, second)
-        result = 0
-        first.downcase.chars do |first_char|
-          second.downcase.chars do |second_char|
-            if second_char == first_char
-              result += 1
-              second.slice!(1..-1)
-              break
-            end
-          end
-        end
-        result == second.length
-        
+        (first.downcase.match Regexp.new /#{second.downcase.split(//).map { |char| char.concat(".*?") }.join}/) != nil     
       end
       def find_best_match
-    
+  
       end
     end
-
     
     class YoutubeSearch
       def initialize
