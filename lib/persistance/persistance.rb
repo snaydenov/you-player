@@ -1,5 +1,5 @@
 require 'mysql2'
-
+require '../lib/const'
 
 	module Persistance
     class Persistance
