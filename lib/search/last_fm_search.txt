@@ -1,0 +1,13 @@
+module YouTube
+  module Search
+   class LastFmSearch
+      def initialize(api_key,api_secret)
+        @lastfm = Lastfm.new(api_key, api_secret)
+        token = lastfm.auth.get_token
+        lastfm.session = lastfm.auth.get_session(token: token)['key']
+      end
+      def search(search_term)
+      end
+    end
+  end
+end

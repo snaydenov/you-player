@@ -12,7 +12,7 @@ module YouPlayer
 	  class Song
       attr_accessor :id, :title, :artist, :youtube_url
 
-      def initialize(video_id, title, url, rating, information)
+      def initialize(video_id = 0, title, url, rating, information)
         @video_id, @title, @url, @rating = video_id, title, url, rating, information
       end
 	  end
