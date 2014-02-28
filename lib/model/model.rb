@@ -18,7 +18,7 @@ module YouPlayer
 	  end
 
 	  class Playlist
-      attr_accessor : playlist_id, user_id, playlist_name
+      attr_accessor :playlist_id, :user_id, :playlist_name
 
       def initialize(playlist_id, user_id, playlist_name)
         @playlist_id = playlist_id
@@ -27,7 +27,7 @@ module YouPlayer
       end
 	  end
     class PlaylistRecord
-      attr_accessor : playlist_id, song_id
+      attr_accessor :playlist_id, :song_id
 
       def initialize(playlist_id, song_id)
         @playlist_id = playlist_id

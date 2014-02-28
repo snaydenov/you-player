@@ -23,11 +23,7 @@ module YouPlayer
         return matrix.last.last
       end
       def letters_match(first, second)
-        (first.downcase.match Regexp.new
-          /#{second.downcase.split(//).map { |char| char.concat(".*?") }.join}/) != nil     
-      end
-      def find_best_match
-
+        (first.downcase.match Regexp.new /#{second.downcase.split(//).map { |char| char.concat(".*?") }.join}/) != nil     
       end
     end
   end
